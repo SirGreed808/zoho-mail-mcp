@@ -58,7 +58,7 @@ const server = new McpServer({ name: "zoho-mail", version: "1.0.0" });
 // ── Tool: list_inbox ──────────────────────────────────────────────────────────
 server.tool(
   "list_inbox",
-  "List recent inbox messages from hey@honestdev808.com — returns sender, subject, date, messageId, and folderId",
+  "List recent inbox messages — returns sender, subject, date, messageId, and folderId",
   { count: z.number().optional().describe("Number of messages to return (default 20)") },
   async ({ count = 20 }) => {
     const data = await zohoFetch(
@@ -119,7 +119,7 @@ server.tool(
 // ── Tool: send_email ──────────────────────────────────────────────────────────
 server.tool(
   "send_email",
-  "Send an email from hey@honestdev808.com",
+  "Send an email from the configured ZOHO_SENDER address",
   {
     to: z.string().describe("Recipient email address"),
     subject: z.string().describe("Email subject"),

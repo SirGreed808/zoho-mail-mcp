@@ -1,7 +1,7 @@
 {
   "name": "zoho-mail-mcp",
   "version": "1.0.0",
-  "description": "MCP server for Zoho Mail — read, search, and send from hey@honestdev808.com",
+  "description": "MCP server for Zoho Mail — read, search, and send email via Claude",
   "main": "index.js",
   "type": "module",
   "scripts": {
